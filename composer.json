@@ -1,0 +1,20 @@
+{
+    "name": "weyforth/response",
+    "description": "",
+    "license": "proprietary",
+    "require": {
+        "illuminate/http": "4.1.*",
+        "illuminate/support": "4.1.*",
+    },
+    "authors": [
+        {
+            "name": "Mike Farrow",
+            "email": "contact@mikefarrow.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Weyforth\\Response": "src/"
+        }
+    }
+}
