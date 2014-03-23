@@ -138,7 +138,7 @@ class JsonResponse extends BaseJsonResponse
      * Add the supplied data to the response.
      *
      * @param string|array $key   Key or array of key-value pairs.
-     * @param string|array $value Value if key is specified.
+     * @param mixed        $value Value if key is specified.
      *
      * @return Weyforth\Response\JsonResponse
      */
