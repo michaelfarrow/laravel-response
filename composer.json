@@ -3,8 +3,8 @@
     "description": "",
     "license": "proprietary",
     "require": {
-        "illuminate/http": "4.1.*",
-        "illuminate/support": "4.1.*"
+        "illuminate/http": "4.2.*",
+        "illuminate/support": "4.2.*"
     },
     "authors": [
         {
