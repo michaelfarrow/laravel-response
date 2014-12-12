@@ -71,7 +71,7 @@ class JsonResponse extends BaseJsonResponse
      *
      * @return void
      */
-    public function __construct($success, $message = '')
+    public function __construct($success, $message = '', $code = null)
     {
         parent::__construct();
         $this->success = $success;
@@ -79,6 +79,10 @@ class JsonResponse extends BaseJsonResponse
 
         if(!$this->success){
             $this->setStatusCode(400);
+        }
+
+        if($code != null){
+            $this->setStatusCode($code);
         }
     }
 
@@ -106,6 +110,18 @@ class JsonResponse extends BaseJsonResponse
     public static function fail($message)
     {
         return new static(false, $message);
+    }
+
+    /**
+     * Shortcut function to create a 404 not found response.
+     *
+     * @param string $message Message string to send with the response.
+     *
+     * @return Weyforth\Response\JsonResponse
+     */
+    public static function notFound($message)
+    {
+        return new static(false, $message, 404);
     }
 
 
