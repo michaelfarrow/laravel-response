@@ -76,6 +76,10 @@ class JsonResponse extends BaseJsonResponse
         parent::__construct();
         $this->success = $success;
         $this->message = $message;
+
+        if(!$this->success){
+            $this->setStatusCode(400);
+        }
     }
 
 
